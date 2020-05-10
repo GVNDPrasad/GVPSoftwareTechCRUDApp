@@ -1,0 +1,13 @@
+#Server Setup
+server.port = 8002 //Able to change port number
+
+#JPA DB setup
+spring.jpa.show-sql= true //Able to see SQL quesries in console
+spring.jpa.properties.hibernate.format_sql= true
+spring.h2.console.enabled= true
+
+#Temporary Database Setup //Able to create temporary table and store data
+spring.datasource.url=jdbc:h2:mem:testdb
+#Open URL http://localhost:8002/h2-console/login.jsp?jsessionid=4415e4009925624d16dd513a036de9a1 in Browser to open Database
+
+Note: This temporary data available upto Server stop.

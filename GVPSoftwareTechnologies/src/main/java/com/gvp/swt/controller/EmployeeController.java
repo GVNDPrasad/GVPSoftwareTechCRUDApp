@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.gvp.swt.domain.EmployeeDM;
 import com.gvp.swt.service.EmployeeService;
 
-
 @RestController
 @RequestMapping(value="/empController")
 public class EmployeeController {
@@ -22,14 +21,12 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService empSer;
 
-	//Insert Operation
 	@PostMapping(value = "/insert")//http://localhost:8002/empController/insert
 	public EmployeeDM insert(@RequestBody EmployeeDM empObj) {
 		System.out.println("Inserion values-Emp Controller-insert()");
 		return empSer.insert(empObj);
 	}
 	
-	//Get operation for all records
 	@GetMapping(value = "/getAll")//http://localhost:8002/empController/getAll
 	public Iterable<EmployeeDM> getAll() {
 		return empSer.getAll();
